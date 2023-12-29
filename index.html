@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Tareas</title>
+        <meta name="description" content="Lista de tareas tipo agenda, donde puede agregar tus diferentes actividades del día e ir verificando cuales vas cumpliendo y cuales no.">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lista de Tareas</h1>
+                <h2>¡Hola <span id="nombreCompleto">Nombre</span>!</h2>
+                    <h3>Intrucciones:</h3>
+                    <p>- Agrega las tareas a completar y la hora del día. (Ej:Hacer la cena, 19:00)</p>
+                    <p>- Si te equivocaste al agregar una tarea presiona "Eliminar".</p>
+                    <p>- Si ya completaste alguna tarea, haz clic encima de esta.</p>
+                    <p>- Haz clic en la lista de tareas para que se organicen por horas.</p>
+                <form id="taskForm">
+                    <label for="taskInput">Nueva Tarea:</label>
+                    <input type="text" id="taskInput" required>
+                    <label for="taskTime">Hora:</label>
+                    <input type="time" id="taskTime" required>
+                    <button type="submit">Agregar</button>
+                </form>
+
+            <form id="buscar">
+                <label for="searchInput">Buscar Tareas:</label>
+                <input type="text" id="searchInput">
+            </form>
+            <div id="botonBusqueda">
+                <button id="filterCompletedButton">Mostrar Completadas</button>
+                <button id="showAllButton">Mostrar Todas</button>
+            </div>    
+            <ul id="taskList"></ul>
+            <div id="botonBusqueda">
+                <button id="clearAllButton">Borrar Todas Las Tareas</button>
+            </div>
+        </div>
+        <div id="background-image"></div>
+        <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./JS/app.js"></script>
+    </body>
+    </html>
